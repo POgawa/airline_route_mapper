@@ -33,19 +33,18 @@ gem 'spring',        group: :development
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'factory_girl_rails'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
-  gem 'factory_girl_rails'
 
 end
 
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'selenium-webdriver'
 end

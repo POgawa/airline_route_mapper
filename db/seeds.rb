@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+
+airline_data = CSV.read("airlines.csv", { encoding: "UTF-8", headers: true, header_converters: :symbol, converters: :all}).map  { |d| d.to_hash }
+
+airline_data.each do |airline|
+  Airline.create(params[:airline])
+end
